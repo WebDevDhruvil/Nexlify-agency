@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexlify — Digital Product Studio for Founders</title>
+  <meta name="description" content="Nexlify is a digital product studio building fast, premium websites and web applications for startups and founders. Web development, product design, and launch strategy — shipped in weeks.">
+  <meta name="keywords" content="digital agency, web development studio, product design, startup website design, freelance web developer Ahmedabad">
+  <meta name="author" content="Nexlify">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nexlify.studio/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nexlify.studio/">
+  <meta property="og:title" content="Nexlify — Digital Product Studio for Founders">
+  <meta property="og:description" content="We design and build fast, premium digital products for startups and founders. Shipped in weeks, not quarters.">
+  <meta property="og:image" content="assets/icons/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nexlify — Digital Product Studio for Founders">
+  <meta name="twitter:description" content="We design and build fast, premium digital products for startups and founders.">
+
+  <meta name="theme-color" content="#0B0E14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F7F5F1" media="(prefers-color-scheme: light)">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%235B5FEF%22/><path d=%22M30 70V30l40 40V30%22 stroke=%22%23F2F4F7%22 stroke-width=%228%22 fill=%22none%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>">
+
+  <!-- Preload critical font weights -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Nexlify",
+    "description": "Digital product studio building websites and web applications for startups and founders.",
+    "url": "https://nexlify.studio/",
+    "email": "hello@nexlify.studio",
+    "areaServed": "Worldwide",
+    "priceRange": "$$",
+    "sameAs": ["https://github.com", "https://linkedin.com"]
+  }
+  </script>
+
+  <!-- Theme is applied before paint to avoid flash-of-wrong-theme -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('nexlify-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <svg viewBox="0 0 100 100" width="48" height="48">
+        <rect width="100" height="100" rx="22" fill="url(#loaderGrad)"/>
+        <path class="loader-path" d="M30 70V30l40 40V30" stroke="#F2F4F7" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="loaderGrad" x1="0" y1="0" x2="100" y2="100">
+            <stop offset="0%" stop-color="#5B5FEF"/>
+            <stop offset="100%" stop-color="#3ED8C3"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <p class="loader-label">Nexlify</p>
+  </div>
+
+  <!-- Custom cursor (desktop only, progressively enhanced via JS) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Nexlify home">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 100 100" width="28" height="28">
+            <rect width="100" height="100" rx="22" fill="url(#logoGrad)"/>
+            <path d="M30 70V30l40 40V30" stroke="#F2F4F7" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="100" y2="100">
+                <stop offset="0%" stop-color="#5B5FEF"/>
+                <stop offset="100%" stop-color="#3ED8C3"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="logo-text">Nexlify</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#testimonials">Clients</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="3.6" stroke="currentColor" stroke-width="1.5"/><path d="M9 1.5v2M9 14.5v2M16.5 9h-2M3.5 9h-2M14.3 3.7l-1.4 1.4M5.1 12.9l-1.4 1.4M14.3 14.3l-1.4-1.4M5.1 5.1L3.7 3.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M15.5 10.6A6.5 6.5 0 017.4 2.5a6.5 6.5 0 108.1 8.1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Start a project</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav">
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Clients</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="mobile-cta">Start a project</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="grid-lines"></div>
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <span class="float-chip chip-1">TypeScript</span>
+        <span class="float-chip chip-2">Next.js</span>
+        <span class="float-chip chip-3">Figma → Code</span>
+      </div>
+
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><span class="dot"></span>Currently booking Q4 projects</p>
+          <h1 class="hero-title reveal">
+            We build the web products
+            <span class="title-accent">founders actually ship.</span>
+          </h1>
+          <p class="hero-sub reveal">
+            Nexlify is a small studio for early-stage teams who need a fast,
+            production-ready site or product — designed with intent, built
+            without bloat, and shipped in weeks, not quarters.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#contact" class="btn btn-primary">
+              <span>Start a project</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#work" class="btn btn-ghost">
+              <span>View our work</span>
+            </a>
+          </div>
+
+          <div class="hero-proof reveal">
+            <div class="proof-avatars" aria-hidden="true">
+              <span style="--i:0"></span><span style="--i:1"></span><span style="--i:2"></span><span style="--i:3"></span>
+            </div>
+            <p><strong>30+</strong> founders trusted us with their launch</p>
+          </div>
+        </div>
+
+        <div class="hero-console reveal" role="img" aria-label="Animated code console illustrating the build process">
+          <div class="console-glow" aria-hidden="true"></div>
+          <div class="console">
+            <div class="console-bar">
+              <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              <span class="console-title">build.sh</span>
+            </div>
+            <div class="console-body">
+              <pre><code id="typedCode"></code><span class="cursor-blink" aria-hidden="true">|</span></pre>
+            </div>
+            <div class="console-footer">
+              <span class="status-pill"><span class="status-dot"></span>Deployed</span>
+              <span class="console-meta">nexlify/build — 4.2s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span></span>
+        <p>Scroll</p>
+      </div>
+    </section>
+
+    <!-- ===== LOGO STRIP ===== -->
+    <section class="logo-strip" aria-label="Technologies we work with">
+      <div class="logo-strip-inner">
+        <p class="logo-strip-label">Built with a modern, battle-tested stack</p>
+        <ul class="tech-list">
+          <li>React</li>
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Tailwind CSS</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== WORK / PORTFOLIO GALLERY ===== -->
+    <section class="work" id="work">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>Selected work</p>
+          <h2>Recent builds, shipped end to end</h2>
+          <p class="section-sub">Five projects, five different problems — a real estate SaaS, a luxury salon, an AI landing page, a listings marketplace, and a fitness app.</p>
+        </div>
+
+        <div class="work-filter reveal" role="tablist" aria-label="Filter work by category">
+          <button class="filter-btn is-active" role="tab" aria-selected="true" data-filter="all">All</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="saas">Product</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="brand">Brand site</button>
+          <button class="filter-btn" role="tab" aria-selected="false" data-filter="landing">Landing page</button>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+          <article class="work-card reveal" data-category="saas">
+            <div class="work-card-media" data-tone="indigo">
+              <div class="media-glass"><span class="media-tag">SaaS Platform</span></div>
+            </div>
+            <div class="work-card-body">
+              <h3>Domaine</h3>
+              <p>Full-stack real estate SaaS with JWT auth, listings engine, and a premium booking flow.</p>
+              <ul class="work-tags"><li>Next.js</li><li>PostgreSQL</li><li>Node.js</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="brand">
+            <div class="work-card-media" data-tone="cyan">
+              <div class="media-glass"><span class="media-tag">Brand Site</span></div>
+            </div>
+            <div class="work-card-body">
+              <h3>Royal Roots Salon</h3>
+              <p>Luxury multi-page salon site with motion-driven galleries and integrated booking.</p>
+              <ul class="work-tags"><li>Next.js</li><li>Framer Motion</li><li>SEO</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="landing">
+            <div class="work-card-media" data-tone="coral">
+              <div class="media-glass"><span class="media-tag">Landing Page</span></div>
+            </div>
+            <div class="work-card-body">
+              <h3>Vexora.ai</h3>
+              <p>High-conversion landing page for an AI agency, built for speed and clarity.</p>
+              <ul class="work-tags"><li>React</li><li>Tailwind</li><li>Vercel</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="saas">
+            <div class="work-card-media" data-tone="indigo">
+              <div class="media-glass"><span class="media-tag">Marketplace</span></div>
+            </div>
+            <div class="work-card-body">
+              <h3>Estatevo</h3>
+              <p>Real estate listing platform with search, filters, and agent dashboards.</p>
+              <ul class="work-tags"><li>React</li><li>TypeScript</li><li>API</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card reveal" data-category="brand">
+            <div class="work-card-media" data-tone="cyan">
+              <div class="media-glass"><span class="media-tag">Mobile UI</span></div>
+            </div>
+            <div class="work-card-body">
+              <h3>FitNova</h3>
+              <p>Fitness app UI with workout tracking, nutrition logging, and an AI coach screen.</p>
+              <ul class="work-tags"><li>React</li><li>Dark UI</li><li>Product Design</li></ul>
+            </div>
+          </article>
+
+          <article class="work-card work-card-cta reveal" data-category="all">
+            <div class="work-cta-inner">
+              <h3>Have something in mind?</h3>
+              <p>Let's scope it out — no obligation, just a straight answer on timeline and cost.</p>
+              <a href="#contact" class="btn btn-primary btn-sm"><span>Get a quote</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section class="services" id="services">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>What we do</p>
+          <h2>Three ways to work with us</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="5" width="22" height="16" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M8 21h10M13 21v-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M6.5 10.5l3 2.5-3 2.5M13 15.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Web Development</h3>
+            <p>Responsive, production-grade sites and apps — from marketing pages to full-stack platforms with real backends.</p>
+            <ul class="service-list">
+              <li>Custom frontend builds</li>
+              <li>API & database architecture</li>
+              <li>Performance optimization</li>
+            </ul>
+            <span class="service-card-glow" aria-hidden="true"></span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M13 8v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Product Design</h3>
+            <p>Interfaces that feel considered — clear hierarchy, deliberate motion, and a visual identity that's actually yours.</p>
+            <ul class="service-list">
+              <li>UI/UX design systems</li>
+              <li>Prototyping & motion design</li>
+              <li>Brand-aligned components</li>
+            </ul>
+            <span class="service-card-glow" aria-hidden="true"></span>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M13 3l3 6 6.5 1-4.5 4.5 1 6.5-6-3.5-6 3.5 1-6.5L3.5 10l6.5-1 3-6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Launch & Growth</h3>
+            <p>SEO-solid foundations, analytics wiring, and a deployment pipeline so your product is ready for real traffic.</p>
+            <ul class="service-list">
+              <li>Technical SEO setup</li>
+              <li>Deployment & CI/CD</li>
+              <li>Post-launch iteration</li>
+            </ul>
+            <span class="service-card-glow" aria-hidden="true"></span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="process" id="process">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>How it works</p>
+          <h2>A straight line from brief to launch</h2>
+        </div>
+
+        <div class="process-track">
+          <div class="process-step reveal">
+            <span class="process-index">01</span>
+            <h3>Scope</h3>
+            <p>We talk through the goal, audience, and constraints. You get a fixed timeline and price — no surprises.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-index">02</span>
+            <h3>Design</h3>
+            <p>A focused design pass grounded in your brand and content, reviewed with you before any code is written.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-index">03</span>
+            <h3>Build</h3>
+            <p>Clean, typed, tested code — built in the open with regular check-ins, not a black box until the deadline.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="process-index">04</span>
+            <h3>Launch</h3>
+            <p>We deploy, verify performance and SEO, and hand over a codebase you (or any dev) can actually maintain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT / STATS ===== -->
+    <section class="about" id="about">
+      <div class="section-inner about-inner">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="dot"></span>About Nexlify</p>
+          <h2>A small studio, on purpose.</h2>
+          <p class="about-text">
+            We stay small so nothing gets diluted between you and the person
+            writing the code. Every project gets direct access to the people
+            building it — no account managers, no relay chain, no scope creep
+            you didn't approve.
+          </p>
+          <p class="about-text">Based in Ahmedabad, working with founders everywhere.</p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+            <p>Projects shipped</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="4">0</span><span class="stat-suffix">wk</span>
+            <p>Average turnaround</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+            <p>On-time delivery</p>
+          </div>
+          <div class="stat-card reveal">
+            <span class="stat-number" data-target="12">0</span><span class="stat-suffix">+</span>
+            <p>Return clients</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>Client feedback</p>
+          <h2>What founders say after launch</h2>
+        </div>
+
+        <div class="testimonial-viewport reveal">
+          <div class="testimonial-track" id="testimonialTrack">
+            <blockquote class="testimonial-card">
+              <p>"Nexlify scoped, designed, and shipped Domaine in under five weeks. The handoff docs meant our own team could pick up the codebase without a single onboarding call."</p>
+              <footer>
+                <span class="avatar" style="--i:4" aria-hidden="true"></span>
+                <div>
+                  <cite>Aarav Mehta</cite>
+                  <span>Founder, Domaine</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p>"We'd rejected two other agency proposals for feeling generic. Royal Roots finally looked like us — the gallery interactions alone have doubled our booking form completions."</p>
+              <footer>
+                <span class="avatar" style="--i:5" aria-hidden="true"></span>
+                <div>
+                  <cite>Priya Nair</cite>
+                  <span>Owner, Royal Roots Salon</span>
+                </div>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <p>"Straight answers on timeline, no scope creep, and the Lighthouse scores to back up the 'fast' promise. Exactly what an early-stage team needs from a dev partner."</p>
+              <footer>
+                <span class="avatar" style="--i:6" aria-hidden="true"></span>
+                <div>
+                  <cite>Devansh Rao</cite>
+                  <span>Co-founder, Vexora.ai</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Testimonial navigation"></div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing" id="pricing">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>Pricing</p>
+          <h2>Fixed scope, fixed price</h2>
+          <p class="section-sub">Every project starts with a scoping call — these are starting points, not final quotes. No hourly billing surprises.</p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="pricing-card reveal">
+            <h3>Launch</h3>
+            <p class="pricing-desc">A focused marketing site or landing page to get you live fast.</p>
+            <p class="pricing-price"><span>$1,900</span><span class="pricing-unit">starting</span></p>
+            <ul class="pricing-features">
+              <li>Up to 5 pages</li>
+              <li>Custom responsive design</li>
+              <li>Contact form + SEO setup</li>
+              <li>2-week turnaround</li>
+              <li>2 rounds of revisions</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block"><span>Start a project</span></a>
+          </article>
+
+          <article class="pricing-card pricing-featured reveal">
+            <span class="pricing-badge">Most popular</span>
+            <h3>Product</h3>
+            <p class="pricing-desc">A full web app or platform with a real backend and auth.</p>
+            <p class="pricing-price"><span>$5,400</span><span class="pricing-unit">starting</span></p>
+            <ul class="pricing-features">
+              <li>Full-stack build (frontend + API)</li>
+              <li>Database design & auth</li>
+              <li>Admin dashboard</li>
+              <li>4–6 week turnaround</li>
+              <li>Unlimited revisions during build</li>
+              <li>30 days of post-launch support</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block"><span>Start a project</span></a>
+          </article>
+
+          <article class="pricing-card reveal">
+            <h3>Partner</h3>
+            <p class="pricing-desc">Ongoing design + dev support for teams shipping continuously.</p>
+            <p class="pricing-price"><span>$2,600</span><span class="pricing-unit">/ month</span></p>
+            <ul class="pricing-features">
+              <li>Dedicated weekly hours</li>
+              <li>Priority turnaround</li>
+              <li>Design + engineering both covered</li>
+              <li>Monthly strategy call</li>
+              <li>Cancel anytime</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block"><span>Talk to us</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+      <div class="section-inner">
+        <div class="section-head reveal">
+          <p class="eyebrow"><span class="dot"></span>FAQ</p>
+          <h2>Questions founders usually ask</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <h3>
+              <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">
+                How long does a typical project take?
+                <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-a1" role="region" aria-labelledby="faq-q1">
+              <p>Most marketing sites take 2 weeks; full-stack products run 4–6 weeks depending on scope. You'll get a fixed timeline before any work starts, based on the scoping call.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">
+                Do you work with early-stage startups with no existing brand?
+                <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-a2" role="region" aria-labelledby="faq-q2">
+              <p>Yes — most of our clients are pre-seed to Series A. If you don't have a visual identity yet, we'll establish one as part of the design phase rather than treating it as a separate project.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">
+                What happens after launch — do you disappear?
+                <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-a3" role="region" aria-labelledby="faq-q3">
+              <p>No. Product-tier projects include 30 days of post-launch support, and Partner clients get ongoing weekly hours. Even after that, you own the full codebase and can maintain it with any developer.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">
+                Can you work with our existing developer or team?
+                <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-a4" role="region" aria-labelledby="faq-q4">
+              <p>Absolutely. We regularly hand off to internal teams mid-build or after launch. All code follows standard conventions with clear documentation, so there's no dependency on us specifically.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3>
+              <button class="faq-trigger" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">
+                What if I only need design, not development?
+                <svg class="faq-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-a5" role="region" aria-labelledby="faq-q5">
+              <p>That's fine — design and development are scoped and priced separately. Tell us what you need on the scoping call and we'll quote just that piece.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="contact-card reveal">
+          <div class="contact-glow" aria-hidden="true"></div>
+          <div class="contact-content">
+            <p class="eyebrow"><span class="dot"></span>Let's talk</p>
+            <h2>Tell us what you're building.</h2>
+            <p class="contact-sub">Fill in a few details and we'll reply within one business day with next steps.</p>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" aria-describedby="err-name">
+                  <span class="field-error" id="err-name" data-for="name">Please enter your name.</span>
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com" aria-describedby="err-email">
+                  <span class="field-error" id="err-email" data-for="email">Please enter a valid email.</span>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="project">Project type</label>
+                <select id="project" name="project" required aria-describedby="err-project">
+                  <option value="" disabled selected>Select one</option>
+                  <option value="website">Website / landing page</option>
+                  <option value="webapp">Web application</option>
+                  <option value="redesign">Redesign</option>
+                  <option value="other">Something else</option>
+                </select>
+                <span class="field-error" id="err-project" data-for="project">Please select a project type.</span>
+              </div>
+              <div class="form-field">
+                <label for="message">Project details</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project, timeline, and budget range." aria-describedby="err-message"></textarea>
+                <span class="field-error" id="err-message" data-for="message">Please add a few details.</span>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">
+                <span id="submitLabel">Send message</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="form-success" id="formSuccess" role="status" aria-live="polite">Thanks — your message is in. We'll be in touch within one business day.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="logo" aria-label="Nexlify home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="24" height="24">
+              <rect width="100" height="100" rx="22" fill="url(#logoGradFoot)"/>
+              <path d="M30 70V30l40 40V30" stroke="#F2F4F7" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logoGradFoot" x1="0" y1="0" x2="100" y2="100">
+                  <stop offset="0%" stop-color="#5B5FEF"/>
+                  <stop offset="100%" stop-color="#3ED8C3"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">Nexlify</span>
+        </a>
+        <p>Digital product studio for founders who need to ship.</p>
+        <div class="footer-social">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="Nexlify on GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.66.5 12.03c0 5.1 3.29 9.42 7.86 10.95.57.1.78-.25.78-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 015.8 0c2.2-1.5 3.17-1.18 3.17-1.18.64 1.6.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .3.2.66.79.55A10.53 10.53 0 0023.5 12c0-6.37-5.15-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Nexlify on LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+          </a>
+          <a href="mailto:hello@nexlify.studio" aria-label="Email Nexlify">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h18v12H3V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@nexlify.studio">hello@nexlify.studio</a></li>
+            <li><a href="#contact">Start a project</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Studio</h4>
+          <ul>
+            <li>Ahmedabad, India</li>
+            <li>Working worldwide</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Nexlify. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M9 14V4M4 9l5-5 5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
